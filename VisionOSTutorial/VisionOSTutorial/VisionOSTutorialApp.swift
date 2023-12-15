@@ -20,19 +20,30 @@ struct VisionOSTutorialApp: App {
         WindowGroup(id: WindowDestination.myModelView2) {
             MyModelView2()
         }
-//        WindowGroup(id: "MyView3") {
-//            MyView3()
-//        }
 
         ImmersiveSpace(id: "ImmersiveSpace") {
             ImmersiveView()
         }
+        
+        ImmersiveSpace(id: WindowDestination.localAssetReality,
+                       for: AssetName.self) { assetName in
+            if let assetName = assetName.wrappedValue {
+                LocalAssetRealityView(assetName: assetName)
+            }
+        }
     }
 }
 
+enum AssetName: String, Codable, Hashable {
+    case chair = "chair_swan"
+    case gramophone = "gramophone"
+    case wateringcan = "wateringcan"
+    case guitar = "gtr"
+}
 
 struct WindowDestination {
     static let myModelView1 = "myModelView1"
     static let myModelView2 = "myModelView2"
     static let myModelView3 = "myModelView3"
+    static let localAssetReality = "localAssetReality"
 }
