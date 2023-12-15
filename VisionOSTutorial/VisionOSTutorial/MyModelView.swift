@@ -22,7 +22,8 @@ struct MyModelView: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
             case .failure(let error):
-                Text("Fail")
+                Text("Fail, error: \(error.localizedDescription)")
+                    .font(.largeTitle)
             }
         }
         .ornament(attachmentAnchor: .scene(.topLeading)) {
@@ -58,7 +59,8 @@ struct MyModelView2: View {
                     .resizable()
                     .aspectRatio(contentMode: .fit)
             case .failure(let error):
-                Text("Fail")
+                Text("Fail, error: \(error.localizedDescription)")
+                    .font(.largeTitle)
             }
         }
         .ornament(attachmentAnchor: .scene(.topLeading)) {

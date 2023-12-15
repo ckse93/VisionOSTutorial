@@ -7,19 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		144D5D822B291B4B009F2B3A /* gramophone.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 144D5D7F2B291B4A009F2B3A /* gramophone.usdz */; };
+		144D5D832B291B4B009F2B3A /* chair_swan.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 144D5D802B291B4B009F2B3A /* chair_swan.usdz */; };
+		144D5D842B291B4B009F2B3A /* wateringcan.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 144D5D812B291B4B009F2B3A /* wateringcan.usdz */; };
+		144D5D882B291FC1009F2B3A /* LocalAssetRealityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144D5D872B291FC1009F2B3A /* LocalAssetRealityView.swift */; };
 		14726BBF2B23FAEA009084DC /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 14726BBE2B23FAEA009084DC /* RealityKitContent */; };
 		14726BC12B23FAEA009084DC /* VisionOSTutorialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14726BC02B23FAEA009084DC /* VisionOSTutorialApp.swift */; };
 		14726BC32B23FAEA009084DC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14726BC22B23FAEA009084DC /* ContentView.swift */; };
 		14726BC52B23FAEA009084DC /* ImmersiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14726BC42B23FAEA009084DC /* ImmersiveView.swift */; };
 		14726BC72B23FAEC009084DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14726BC62B23FAEC009084DC /* Assets.xcassets */; };
 		14726BCA2B23FAEC009084DC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14726BC92B23FAEC009084DC /* Preview Assets.xcassets */; };
-		14726BD42B240749009084DC /* fender_stratocaster.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 14726BD12B240748009084DC /* fender_stratocaster.usdz */; };
-		14726BD52B240749009084DC /* robot_walk_idle.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 14726BD22B240749009084DC /* robot_walk_idle.usdz */; };
 		14726BD62B240749009084DC /* gtr.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 14726BD32B240749009084DC /* gtr.usdz */; };
 		14726BD82B240773009084DC /* MyModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14726BD72B240773009084DC /* MyModelView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		144D5D7F2B291B4A009F2B3A /* gramophone.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = gramophone.usdz; sourceTree = "<group>"; };
+		144D5D802B291B4B009F2B3A /* chair_swan.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = chair_swan.usdz; sourceTree = "<group>"; };
+		144D5D812B291B4B009F2B3A /* wateringcan.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = wateringcan.usdz; sourceTree = "<group>"; };
+		144D5D872B291FC1009F2B3A /* LocalAssetRealityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAssetRealityView.swift; sourceTree = "<group>"; };
 		14726BB92B23FAEA009084DC /* VisionOSTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VisionOSTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14726BBD2B23FAEA009084DC /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
 		14726BC02B23FAEA009084DC /* VisionOSTutorialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionOSTutorialApp.swift; sourceTree = "<group>"; };
@@ -28,8 +34,6 @@
 		14726BC62B23FAEC009084DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14726BC92B23FAEC009084DC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		14726BCB2B23FAEC009084DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		14726BD12B240748009084DC /* fender_stratocaster.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = fender_stratocaster.usdz; sourceTree = "<group>"; };
-		14726BD22B240749009084DC /* robot_walk_idle.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = robot_walk_idle.usdz; sourceTree = "<group>"; };
 		14726BD32B240749009084DC /* gtr.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = gtr.usdz; sourceTree = "<group>"; };
 		14726BD72B240773009084DC /* MyModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyModelView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,9 +71,11 @@
 			isa = PBXGroup;
 			children = (
 				14726BC02B23FAEA009084DC /* VisionOSTutorialApp.swift */,
-				14726BD12B240748009084DC /* fender_stratocaster.usdz */,
+				144D5D872B291FC1009F2B3A /* LocalAssetRealityView.swift */,
+				144D5D802B291B4B009F2B3A /* chair_swan.usdz */,
+				144D5D7F2B291B4A009F2B3A /* gramophone.usdz */,
+				144D5D812B291B4B009F2B3A /* wateringcan.usdz */,
 				14726BD32B240749009084DC /* gtr.usdz */,
-				14726BD22B240749009084DC /* robot_walk_idle.usdz */,
 				14726BC22B23FAEA009084DC /* ContentView.swift */,
 				14726BC42B23FAEA009084DC /* ImmersiveView.swift */,
 				14726BC62B23FAEC009084DC /* Assets.xcassets */,
@@ -158,10 +164,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				14726BCA2B23FAEC009084DC /* Preview Assets.xcassets in Resources */,
-				14726BD52B240749009084DC /* robot_walk_idle.usdz in Resources */,
 				14726BC72B23FAEC009084DC /* Assets.xcassets in Resources */,
-				14726BD42B240749009084DC /* fender_stratocaster.usdz in Resources */,
 				14726BD62B240749009084DC /* gtr.usdz in Resources */,
+				144D5D842B291B4B009F2B3A /* wateringcan.usdz in Resources */,
+				144D5D832B291B4B009F2B3A /* chair_swan.usdz in Resources */,
+				144D5D822B291B4B009F2B3A /* gramophone.usdz in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,6 +182,7 @@
 				14726BC32B23FAEA009084DC /* ContentView.swift in Sources */,
 				14726BC12B23FAEA009084DC /* VisionOSTutorialApp.swift in Sources */,
 				14726BD82B240773009084DC /* MyModelView.swift in Sources */,
+				144D5D882B291FC1009F2B3A /* LocalAssetRealityView.swift in Sources */,
 				14726BC52B23FAEA009084DC /* ImmersiveView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
