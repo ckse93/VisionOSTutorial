@@ -19,6 +19,7 @@
 		14726BCA2B23FAEC009084DC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14726BC92B23FAEC009084DC /* Preview Assets.xcassets */; };
 		14726BD62B240749009084DC /* gtr.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 14726BD32B240749009084DC /* gtr.usdz */; };
 		14726BD82B240773009084DC /* MyModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14726BD72B240773009084DC /* MyModelView.swift */; };
+		AF8FB3C62B5F22D200A38DCB /* RemoteAssetRealityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8FB3C52B5F22D200A38DCB /* RemoteAssetRealityView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		14726BCB2B23FAEC009084DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14726BD32B240749009084DC /* gtr.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = gtr.usdz; sourceTree = "<group>"; };
 		14726BD72B240773009084DC /* MyModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyModelView.swift; sourceTree = "<group>"; };
+		AF8FB3C52B5F22D200A38DCB /* RemoteAssetRealityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAssetRealityView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 			children = (
 				14726BC02B23FAEA009084DC /* VisionOSTutorialApp.swift */,
 				144D5D872B291FC1009F2B3A /* LocalAssetRealityView.swift */,
+				AF8FB3C52B5F22D200A38DCB /* RemoteAssetRealityView.swift */,
 				144D5D802B291B4B009F2B3A /* chair_swan.usdz */,
 				144D5D7F2B291B4A009F2B3A /* gramophone.usdz */,
 				144D5D812B291B4B009F2B3A /* wateringcan.usdz */,
@@ -183,6 +186,7 @@
 				14726BC12B23FAEA009084DC /* VisionOSTutorialApp.swift in Sources */,
 				14726BD82B240773009084DC /* MyModelView.swift in Sources */,
 				144D5D882B291FC1009F2B3A /* LocalAssetRealityView.swift in Sources */,
+				AF8FB3C62B5F22D200A38DCB /* RemoteAssetRealityView.swift in Sources */,
 				14726BC52B23FAEA009084DC /* ImmersiveView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

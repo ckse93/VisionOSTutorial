@@ -31,6 +31,10 @@ struct VisionOSTutorialApp: App {
                 LocalAssetRealityView(assetName: assetName)
             }
         }
+        
+        ImmersiveSpace(id: WindowDestination.remoteAssetReality) {
+            RemoteAssetRealityView()
+        }
     }
 }
 
@@ -46,4 +50,5 @@ struct WindowDestination {
     static let myModelView2 = "myModelView2"
     static let myModelView3 = "myModelView3"
     static let localAssetReality = "localAssetReality"
+    static let remoteAssetReality = "remoteAssetReality"
 }
