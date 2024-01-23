@@ -39,34 +39,10 @@ struct ContentView: View {
             
             Button {
                 Task {
-                    await self.openImmersiveSpace(id: WindowDestination.localAssetReality, value: AssetName.chair)
+                    await self.openImmersiveSpace(id: WindowDestination.remoteAssetReality)
                 }
             } label: {
-                Text("open ImmersiveSpace with Chair")
-            }
-            
-            Button {
-                Task {
-                    await self.openImmersiveSpace(id: WindowDestination.localAssetReality, value: AssetName.gramophone)
-                }
-            } label: {
-                Text("open ImmersiveSpace with Gramophone")
-            }
-            
-            Button {
-                Task {
-                    await self.openImmersiveSpace(id: WindowDestination.localAssetReality, value: AssetName.wateringcan)
-                }
-            } label: {
-                Text("open ImmersiveSpace with watering can")
-            }
-            
-            Button {
-                Task {
-                    await self.openImmersiveSpace(id: WindowDestination.localAssetReality, value: AssetName.guitar)
-                }
-            } label: {
-                Text("open ImmersiveSpace with guitar")
+                Text("remote asset reality view")
             }
             
             Button {
