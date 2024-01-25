@@ -12,5 +12,8 @@ extension ModelEntity {
     func makeTappable() {
         self.components.set(InputTargetComponent())
         self.generateCollisionShapes(recursive: true)
+        self.components.set(PhysicsBodyComponent(mode: .kinematic))
+        self.collision = CollisionComponent(shapes: [.generateBox(size: .random(in: (30...32)))], isStatic: true)
+        self.physicsBody = PhysicsBodyComponent()
     }
 }

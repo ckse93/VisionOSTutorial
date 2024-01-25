@@ -5,6 +5,7 @@
 //  Created by Chan Jung on 1/22/24.
 //
 
+import ARKit
 import SwiftUI
 import RealityKit
 
@@ -21,7 +22,9 @@ struct RemoteAssetRealityView: View {
             case .fail:
                 EmptyView()
             case .success(let modelEntity):
-                content.add(modelEntity)
+                for entity in modelEntity {
+                    content.add(entity)
+                }
             }
         }
         .gesture(DragGesture()
@@ -39,12 +42,29 @@ struct RemoteAssetRealityView: View {
 enum FetchResult {
     case loading
     case fail
-    case success(ModelEntity)
+    case success([ModelEntity])
 }
 
 @Observable
 final class RemoteAssetRealityViewModel {
+    private let arSession = ARKitSession()
+    private let sceneReconstruction = SceneReconstructionProvider()
+    
     var fetchResult: FetchResult = .loading
+    
+    func runSession() async {
+        do {
+            try await arSession.run([sceneReconstruction])
+        } catch {
+            print("ERROR: \(error.localizedDescription)")
+        }
+    }
+    
+    func reconstructionUpdate() async {
+        for await update in sceneReconstruction.anchorUpdates {
+            
+        }
+    }
     
     func fetchAsset() async {
         self.fetchResult = .loading
@@ -54,9 +74,11 @@ final class RemoteAssetRealityViewModel {
             return
         }
         do {
-            let modelEntity = try await ModelEntity(remoteURL: url)
-            await modelEntity.makeTappable()
-            self.fetchResult = .success(modelEntity)
+            async let m1 = try await ModelEntity(remoteURL: URL(string: "https://developer.apple.com/augmented-reality/quick-look/models/biplane/toy_biplane_idle.usdz")!)
+            try await m1.makeTappable()
+            async let modelEntity = try await ModelEntity(remoteURL: url)
+            try await modelEntity.makeTappable()
+            self.fetchResult = try await .success([m1, modelEntity])
         } catch {
             self.fetchResult = .fail
         }
