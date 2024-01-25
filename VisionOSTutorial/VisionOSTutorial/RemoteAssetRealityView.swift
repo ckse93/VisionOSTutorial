@@ -13,6 +13,8 @@ struct RemoteAssetRealityView: View {
     
     var body: some View {
         RealityView { _ in } update: { content in
+            content.entities.removeAll()
+            
             switch viewModel.fetchResult {
             case .loading:
                 EmptyView()
@@ -22,6 +24,12 @@ struct RemoteAssetRealityView: View {
                 content.add(modelEntity)
             }
         }
+        .gesture(DragGesture()
+            .targetedToAnyEntity()
+            .onChanged({ value in
+                value.entity.position = value.convert(value.location3D, from: .local, to: value.entity.parent!)
+            })
+        )
         .task {
             await viewModel.fetchAsset()
         }
@@ -47,6 +55,7 @@ final class RemoteAssetRealityViewModel {
         }
         do {
             let modelEntity = try await ModelEntity(remoteURL: url)
+            await modelEntity.makeTappable()
             self.fetchResult = .success(modelEntity)
         } catch {
             self.fetchResult = .fail
