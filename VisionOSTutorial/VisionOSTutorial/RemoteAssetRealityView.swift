@@ -10,18 +10,19 @@ import RealityKit
 
 struct RemoteAssetRealityView: View {
     @State var viewModel = RemoteAssetRealityViewModel()
+    let urls: [URL] = [
+        URL(string: "https://developer.apple.com/augmented-reality/quick-look/models/teapot/teapot.usdz")!,
+        URL(string: "https://developer.apple.com/augmented-reality/quick-look/models/tulip/flower_tulip.usdz")!,
+        URL(string: "https://developer.apple.com/augmented-reality/quick-look/models/wateringcan/wateringcan.usdz")!,
+        URL(string: "https://developer.apple.com/augmented-reality/quick-look/models/gramophone/gramophone.usdz")!,
+        URL(string: "https://developer.apple.com/augmented-reality/quick-look/models/pancakes/pancakes.usdz")!,
+        URL(string: "https://developer.apple.com/augmented-reality/quick-look/models/toycar/toy_car.usdz")!
+    ]
     
     var body: some View {
         RealityView { _ in } update: { content in
-            content.entities.removeAll()
-            
-            switch viewModel.fetchResult {
-            case .loading:
-                EmptyView()
-            case .fail:
-                EmptyView()
-            case .success(let modelEntity):
-                content.add(modelEntity)
+            for entity in viewModel.modelEntities {
+                content.add(entity)
             }
         }
         .gesture(DragGesture()
@@ -31,42 +32,56 @@ struct RemoteAssetRealityView: View {
             })
         )
         .task {
-            await viewModel.fetchAsset()
+            let startTime = Date()
+//            await viewModel.fetchAsset(urls: self.urls)
+            await viewModel.fetchAssetFaster(urls: self.urls)
+            let endTime = Date()
+            let lapsed = endTime.timeIntervalSince(startTime)
+            print("lalalala took \(lapsed) seconds")
         }
     }
 }
 
-enum FetchResult {
-    case loading
-    case fail
-    case success(ModelEntity)
-}
-
 @Observable
 final class RemoteAssetRealityViewModel {
-    var fetchResult: FetchResult = .loading
+    var modelEntities: [ModelEntity] = []
     
-    func fetchAsset() async {
-        self.fetchResult = .loading
-        
-        guard let url = URL(string: "https://developer.apple.com/augmented-reality/quick-look/models/teapot/teapot.usdz") else {
-            self.fetchResult = .fail
-            return
+    func fetchAsset(urls: [URL]) async {
+        for url in urls {
+            do {
+                let modelEntity = try await ModelEntity(remoteURL: url)
+                await modelEntity.makeTappable()
+                print("lalala appending to modelEntities")
+                self.modelEntities.append(modelEntity)
+            } catch {
+                return
+            }
         }
-        do {
-            let modelEntity = try await ModelEntity(remoteURL: url)
-            await modelEntity.makeTappable()
-            self.fetchResult = .success(modelEntity)
-        } catch {
-            self.fetchResult = .fail
+    }
+    
+    func fetchAssetFaster(urls: [URL]) async {
+        await withTaskGroup(of: ModelEntity?.self) { taskGroup in
+            for url in urls {
+                taskGroup.addTask {
+                    try? await ModelEntity(remoteURL: url)
+                }
+            }
+            
+            for await modelEntityOptional in taskGroup {
+                if let modelEntity = modelEntityOptional {
+                    await modelEntity.makeTappable()
+                    print("lalala appending to modelEntities")
+                    self.modelEntities.append(modelEntity)
+                }
+            }
         }
-        
     }
 }
 
 extension ModelEntity {
     convenience init(remoteURL: URL) async throws {
-        
+        print("lalalal adding task")
+//        print("started downloading \(remoteURL.absoluteString)")
         let (data, _) = try await URLSession.shared.data(from: remoteURL)
         
         let fileURL = URL(filePath: NSTemporaryDirectory())
