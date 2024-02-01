@@ -13,14 +13,7 @@ struct RemoteAssetRealityView: View {
     
     var body: some View {
         RealityView { _ in } update: { content in
-            content.entities.removeAll()
-            
-            switch viewModel.fetchResult {
-            case .loading:
-                EmptyView()
-            case .fail:
-                EmptyView()
-            case .success(let modelEntity):
+            for modelEntity in viewModel.modelEntities {
                 content.add(modelEntity)
             }
         }
@@ -31,42 +24,64 @@ struct RemoteAssetRealityView: View {
             })
         )
         .task {
-            await viewModel.fetchAsset()
+            let startTime = Date()
+//            await viewModel.fetchAsset()
+            await viewModel.fetchAssetFast()
+            let endTime = Date()
+            let elapsed = endTime.timeIntervalSince(startTime)
+            print("lalalalalala elapsed time: \(elapsed)")
         }
     }
 }
 
-enum FetchResult {
-    case loading
-    case fail
-    case success(ModelEntity)
-}
-
 @Observable
 final class RemoteAssetRealityViewModel {
-    var fetchResult: FetchResult = .loading
+    var modelEntities: [ModelEntity] = []
+    
+    let urls: [URL] = [
+            URL(string: "https://developer.apple.com/augmented-reality/quick-look/models/teapot/teapot.usdz")!,
+            URL(string: "https://developer.apple.com/augmented-reality/quick-look/models/tulip/flower_tulip.usdz")!,
+            URL(string: "https://developer.apple.com/augmented-reality/quick-look/models/wateringcan/wateringcan.usdz")!,
+            URL(string: "https://developer.apple.com/augmented-reality/quick-look/models/gramophone/gramophone.usdz")!,
+            URL(string: "https://developer.apple.com/augmented-reality/quick-look/models/pancakes/pancakes.usdz")!,
+            URL(string: "https://developer.apple.com/augmented-reality/quick-look/models/toycar/toy_car.usdz")!
+        ]
     
     func fetchAsset() async {
-        self.fetchResult = .loading
-        
-        guard let url = URL(string: "https://developer.apple.com/augmented-reality/quick-look/models/teapot/teapot.usdz") else {
-            self.fetchResult = .fail
-            return
+        for url in urls {
+            do {
+                let modelEntity = try await ModelEntity(remoteURL: url)
+                await modelEntity.makeTappable()
+                self.modelEntities.append(modelEntity)
+                print("lalalalala adding to modelEntity")
+            } catch {
+                print("lalalal error")
+            }
         }
-        do {
-            let modelEntity = try await ModelEntity(remoteURL: url)
-            await modelEntity.makeTappable()
-            self.fetchResult = .success(modelEntity)
-        } catch {
-            self.fetchResult = .fail
+    }
+    
+    func fetchAssetFast() async {
+        await withTaskGroup(of: ModelEntity?.self) { taskGroup in
+            for url in urls {
+                taskGroup.addTask {
+                    try? await ModelEntity(remoteURL: url)
+                }
+            }
+            
+            for await modelEntityOptional in taskGroup {
+                if let modelEntity = modelEntityOptional {
+                    await modelEntity.makeTappable()
+                    self.modelEntities.append(modelEntity)
+                    print("lalalalala adding to modelEntity")
+                }
+            }
         }
-        
     }
 }
 
 extension ModelEntity {
     convenience init(remoteURL: URL) async throws {
-        
+        print("lalalalal adding task")
         let (data, _) = try await URLSession.shared.data(from: remoteURL)
         
         let fileURL = URL(filePath: NSTemporaryDirectory())
