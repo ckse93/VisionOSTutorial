@@ -19,6 +19,7 @@
 		14726BCA2B23FAEC009084DC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14726BC92B23FAEC009084DC /* Preview Assets.xcassets */; };
 		14726BD62B240749009084DC /* gtr.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 14726BD32B240749009084DC /* gtr.usdz */; };
 		14726BD82B240773009084DC /* MyModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14726BD72B240773009084DC /* MyModelView.swift */; };
+		AF138D762B9BC029006679B1 /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF138D752B9BC029006679B1 /* ButtonsView.swift */; };
 		AF434AC82B61EC52008B346A /* ModelEntity + Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF434AC72B61EC52008B346A /* ModelEntity + Helper.swift */; };
 		AF8FB3C62B5F22D200A38DCB /* RemoteAssetRealityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8FB3C52B5F22D200A38DCB /* RemoteAssetRealityView.swift */; };
 /* End PBXBuildFile section */
@@ -38,6 +39,7 @@
 		14726BCB2B23FAEC009084DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14726BD32B240749009084DC /* gtr.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = gtr.usdz; sourceTree = "<group>"; };
 		14726BD72B240773009084DC /* MyModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyModelView.swift; sourceTree = "<group>"; };
+		AF138D752B9BC029006679B1 /* ButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
 		AF434AC72B61EC52008B346A /* ModelEntity + Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ModelEntity + Helper.swift"; sourceTree = "<group>"; };
 		AF8FB3C52B5F22D200A38DCB /* RemoteAssetRealityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAssetRealityView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,6 +90,7 @@
 				14726BCB2B23FAEC009084DC /* Info.plist */,
 				14726BC82B23FAEC009084DC /* Preview Content */,
 				14726BD72B240773009084DC /* MyModelView.swift */,
+				AF138D752B9BC029006679B1 /* ButtonsView.swift */,
 			);
 			path = VisionOSTutorial;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 				14726BD82B240773009084DC /* MyModelView.swift in Sources */,
 				144D5D882B291FC1009F2B3A /* LocalAssetRealityView.swift in Sources */,
 				AF8FB3C62B5F22D200A38DCB /* RemoteAssetRealityView.swift in Sources */,
+				AF138D762B9BC029006679B1 /* ButtonsView.swift in Sources */,
 				14726BC52B23FAEA009084DC /* ImmersiveView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,6 +344,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 1.0.1;
 			};
 			name = Debug;
 		};
@@ -366,6 +371,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 1.0.1;
 			};
 			name = Release;
 		};

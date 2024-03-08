@@ -20,6 +20,10 @@ struct VisionOSTutorialApp: App {
         WindowGroup(id: WindowDestination.myModelView2) {
             MyModelView2()
         }
+        
+        WindowGroup(id: WindowDestination.buttonsView) {
+            ButtonsView()
+        }
 
         ImmersiveSpace(id: "ImmersiveSpace") {
             ImmersiveView()
@@ -51,4 +55,5 @@ struct WindowDestination {
     static let myModelView3 = "myModelView3"
     static let localAssetReality = "localAssetReality"
     static let remoteAssetReality = "remoteAssetReality"
+    static let buttonsView = "buttonsView"
 }
