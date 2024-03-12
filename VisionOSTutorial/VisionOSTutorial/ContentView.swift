@@ -21,6 +21,11 @@ struct ContentView: View {
     var body: some View {
         VStack {
             Button {
+                self.openWindow(id: WindowDestination.buttonsView)
+            } label: {
+                Text("open Buttons View")
+            }
+            Button {
                 self.openWindow(id: WindowDestination.myModelView1)
             } label: {
                 Text("open myModelView1")

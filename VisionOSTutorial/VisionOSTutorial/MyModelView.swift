@@ -24,6 +24,8 @@ struct MyModelView: View {
             case .failure(let error):
                 Text("Fail, error: \(error.localizedDescription)")
                     .font(.largeTitle)
+            default:
+                Text("unknonw case")
             }
         }
         .ornament(attachmentAnchor: .scene(.topLeading)) {
@@ -61,6 +63,8 @@ struct MyModelView2: View {
             case .failure(let error):
                 Text("Fail, error: \(error.localizedDescription)")
                     .font(.largeTitle)
+            default:
+                Text("unknonw case")
             }
         }
         .ornament(attachmentAnchor: .scene(.topLeading)) {

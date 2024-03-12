@@ -11,7 +11,6 @@
 		144D5D832B291B4B009F2B3A /* chair_swan.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 144D5D802B291B4B009F2B3A /* chair_swan.usdz */; };
 		144D5D842B291B4B009F2B3A /* wateringcan.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 144D5D812B291B4B009F2B3A /* wateringcan.usdz */; };
 		144D5D882B291FC1009F2B3A /* LocalAssetRealityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144D5D872B291FC1009F2B3A /* LocalAssetRealityView.swift */; };
-		14726BBF2B23FAEA009084DC /* RealityKitContent in Frameworks */ = {isa = PBXBuildFile; productRef = 14726BBE2B23FAEA009084DC /* RealityKitContent */; };
 		14726BC12B23FAEA009084DC /* VisionOSTutorialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14726BC02B23FAEA009084DC /* VisionOSTutorialApp.swift */; };
 		14726BC32B23FAEA009084DC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14726BC22B23FAEA009084DC /* ContentView.swift */; };
 		14726BC52B23FAEA009084DC /* ImmersiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14726BC42B23FAEA009084DC /* ImmersiveView.swift */; };
@@ -19,6 +18,7 @@
 		14726BCA2B23FAEC009084DC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14726BC92B23FAEC009084DC /* Preview Assets.xcassets */; };
 		14726BD62B240749009084DC /* gtr.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 14726BD32B240749009084DC /* gtr.usdz */; };
 		14726BD82B240773009084DC /* MyModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14726BD72B240773009084DC /* MyModelView.swift */; };
+		AF138D762B9BC029006679B1 /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF138D752B9BC029006679B1 /* ButtonsView.swift */; };
 		AF434AC82B61EC52008B346A /* ModelEntity + Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF434AC72B61EC52008B346A /* ModelEntity + Helper.swift */; };
 		AF8FB3C62B5F22D200A38DCB /* RemoteAssetRealityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8FB3C52B5F22D200A38DCB /* RemoteAssetRealityView.swift */; };
 /* End PBXBuildFile section */
@@ -38,6 +38,7 @@
 		14726BCB2B23FAEC009084DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14726BD32B240749009084DC /* gtr.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = gtr.usdz; sourceTree = "<group>"; };
 		14726BD72B240773009084DC /* MyModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyModelView.swift; sourceTree = "<group>"; };
+		AF138D752B9BC029006679B1 /* ButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
 		AF434AC72B61EC52008B346A /* ModelEntity + Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ModelEntity + Helper.swift"; sourceTree = "<group>"; };
 		AF8FB3C52B5F22D200A38DCB /* RemoteAssetRealityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAssetRealityView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -47,7 +48,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14726BBF2B23FAEA009084DC /* RealityKitContent in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +88,7 @@
 				14726BCB2B23FAEC009084DC /* Info.plist */,
 				14726BC82B23FAEC009084DC /* Preview Content */,
 				14726BD72B240773009084DC /* MyModelView.swift */,
+				AF138D752B9BC029006679B1 /* ButtonsView.swift */,
 			);
 			path = VisionOSTutorial;
 			sourceTree = "<group>";
@@ -125,7 +126,6 @@
 			);
 			name = VisionOSTutorial;
 			packageProductDependencies = (
-				14726BBE2B23FAEA009084DC /* RealityKitContent */,
 			);
 			productName = VisionOSTutorial;
 			productReference = 14726BB92B23FAEA009084DC /* VisionOSTutorial.app */;
@@ -191,6 +191,7 @@
 				14726BD82B240773009084DC /* MyModelView.swift in Sources */,
 				144D5D882B291FC1009F2B3A /* LocalAssetRealityView.swift in Sources */,
 				AF8FB3C62B5F22D200A38DCB /* RemoteAssetRealityView.swift in Sources */,
+				AF138D762B9BC029006679B1 /* ButtonsView.swift in Sources */,
 				14726BC52B23FAEA009084DC /* ImmersiveView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,12 +335,13 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = overPaidEngineer.VisionOSTutorial;
+				PRODUCT_BUNDLE_IDENTIFIER = "overPaidEngineer.VisionOS-Tutorial";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 1.0.1;
 			};
 			name = Debug;
 		};
@@ -360,12 +362,13 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = overPaidEngineer.VisionOSTutorial;
+				PRODUCT_BUNDLE_IDENTIFIER = "overPaidEngineer.VisionOS-Tutorial";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
+				XROS_DEPLOYMENT_TARGET = 1.0.1;
 			};
 			name = Release;
 		};
@@ -391,13 +394,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		14726BBE2B23FAEA009084DC /* RealityKitContent */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = RealityKitContent;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 14726BB12B23FAEA009084DC /* Project object */;
 }
