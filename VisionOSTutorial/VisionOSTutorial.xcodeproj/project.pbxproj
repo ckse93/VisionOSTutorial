@@ -20,6 +20,7 @@
 		14726BD82B240773009084DC /* MyModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14726BD72B240773009084DC /* MyModelView.swift */; };
 		AF138D762B9BC029006679B1 /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF138D752B9BC029006679B1 /* ButtonsView.swift */; };
 		AF434AC82B61EC52008B346A /* ModelEntity + Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF434AC72B61EC52008B346A /* ModelEntity + Helper.swift */; };
+		AF5939FE2BA8F07600C65632 /* WorldAnchorLocalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5939FD2BA8F07600C65632 /* WorldAnchorLocalView.swift */; };
 		AF8FB3C62B5F22D200A38DCB /* RemoteAssetRealityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8FB3C52B5F22D200A38DCB /* RemoteAssetRealityView.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 		14726BD72B240773009084DC /* MyModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyModelView.swift; sourceTree = "<group>"; };
 		AF138D752B9BC029006679B1 /* ButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
 		AF434AC72B61EC52008B346A /* ModelEntity + Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ModelEntity + Helper.swift"; sourceTree = "<group>"; };
+		AF5939FD2BA8F07600C65632 /* WorldAnchorLocalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldAnchorLocalView.swift; sourceTree = "<group>"; };
 		AF8FB3C52B5F22D200A38DCB /* RemoteAssetRealityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAssetRealityView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,6 +76,7 @@
 		14726BBB2B23FAEA009084DC /* VisionOSTutorial */ = {
 			isa = PBXGroup;
 			children = (
+				AF5939FC2BA8F06200C65632 /* WorldAnchorLocal */,
 				14726BC02B23FAEA009084DC /* VisionOSTutorialApp.swift */,
 				144D5D872B291FC1009F2B3A /* LocalAssetRealityView.swift */,
 				AF8FB3C52B5F22D200A38DCB /* RemoteAssetRealityView.swift */,
@@ -107,6 +110,14 @@
 				14726BC92B23FAEC009084DC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AF5939FC2BA8F06200C65632 /* WorldAnchorLocal */ = {
+			isa = PBXGroup;
+			children = (
+				AF5939FD2BA8F07600C65632 /* WorldAnchorLocalView.swift */,
+			);
+			path = WorldAnchorLocal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,6 +200,7 @@
 				14726BC32B23FAEA009084DC /* ContentView.swift in Sources */,
 				14726BC12B23FAEA009084DC /* VisionOSTutorialApp.swift in Sources */,
 				14726BD82B240773009084DC /* MyModelView.swift in Sources */,
+				AF5939FE2BA8F07600C65632 /* WorldAnchorLocalView.swift in Sources */,
 				144D5D882B291FC1009F2B3A /* LocalAssetRealityView.swift in Sources */,
 				AF8FB3C62B5F22D200A38DCB /* RemoteAssetRealityView.swift in Sources */,
 				AF138D762B9BC029006679B1 /* ButtonsView.swift in Sources */,

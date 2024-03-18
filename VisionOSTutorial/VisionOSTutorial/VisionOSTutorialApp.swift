@@ -24,9 +24,12 @@ struct VisionOSTutorialApp: App {
         WindowGroup(id: WindowDestination.buttonsView) {
             ButtonsView()
         }
-
-        ImmersiveSpace(id: "ImmersiveSpace") {
-            ImmersiveView()
+        
+        ImmersiveSpace(id: WindowDestination.worldAnchorLocal,
+                       for: AssetName.self) { assetName in
+            if let assetName = assetName.wrappedValue {
+                WorldAnchorLocalView(assetName: assetName)
+            }
         }
         
         ImmersiveSpace(id: WindowDestination.localAssetReality,
@@ -56,4 +59,5 @@ struct WindowDestination {
     static let localAssetReality = "localAssetReality"
     static let remoteAssetReality = "remoteAssetReality"
     static let buttonsView = "buttonsView"
+    static let worldAnchorLocal = "worldAnchorLocal"
 }
