@@ -39,5 +39,8 @@ struct LocalAssetWorldAnchorView: View {
             // immediately end.
             await placementManager.processWorldAnchorUpdates()
         }
+        .onDisappear {
+            placementManager.saveWorldAnchorsObjectsMapToDisk()
+        }
     }
 }

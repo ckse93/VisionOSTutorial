@@ -27,6 +27,7 @@
 		AF5939F52BA8AB1F00C65632 /* PlaceableAndPlacedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5939F42BA8AB1F00C65632 /* PlaceableAndPlacedObject.swift */; };
 		AF5939F72BA8AB8100C65632 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5939F62BA8AB8100C65632 /* AppState.swift */; };
 		AF5939F92BA8BC3D00C65632 /* LocalAssetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5939F82BA8BC3D00C65632 /* LocalAssetView.swift */; };
+		AF5939FB2BA8ED0B00C65632 /* ReadWriteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5939FA2BA8ED0B00C65632 /* ReadWriteManager.swift */; };
 		AF8FB3C62B5F22D200A38DCB /* RemoteAssetRealityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8FB3C52B5F22D200A38DCB /* RemoteAssetRealityView.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		AF5939F42BA8AB1F00C65632 /* PlaceableAndPlacedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceableAndPlacedObject.swift; sourceTree = "<group>"; };
 		AF5939F62BA8AB8100C65632 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		AF5939F82BA8BC3D00C65632 /* LocalAssetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAssetView.swift; sourceTree = "<group>"; };
+		AF5939FA2BA8ED0B00C65632 /* ReadWriteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadWriteManager.swift; sourceTree = "<group>"; };
 		AF8FB3C52B5F22D200A38DCB /* RemoteAssetRealityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAssetRealityView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,6 +144,7 @@
 				AF5939F02BA8AABC00C65632 /* WorldAnchorManager.swift */,
 				AF5939F22BA8AAE100C65632 /* PlacementManager.swift */,
 				AF5939F42BA8AB1F00C65632 /* PlaceableAndPlacedObject.swift */,
+				AF5939FA2BA8ED0B00C65632 /* ReadWriteManager.swift */,
 			);
 			path = WorldAnchor;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				AF434AC82B61EC52008B346A /* ModelEntity + Helper.swift in Sources */,
 				AF5939F32BA8AAE100C65632 /* PlacementManager.swift in Sources */,
 				14726BC32B23FAEA009084DC /* ContentView.swift in Sources */,
+				AF5939FB2BA8ED0B00C65632 /* ReadWriteManager.swift in Sources */,
 				14726BC12B23FAEA009084DC /* VisionOSTutorialApp.swift in Sources */,
 				AF5939F52BA8AB1F00C65632 /* PlaceableAndPlacedObject.swift in Sources */,
 				14726BD82B240773009084DC /* MyModelView.swift in Sources */,

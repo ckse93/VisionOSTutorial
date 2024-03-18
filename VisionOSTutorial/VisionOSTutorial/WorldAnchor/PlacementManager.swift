@@ -59,6 +59,10 @@ final class PlacementManager {
         }
     }
     
+    func saveWorldAnchorsObjectsMapToDisk() {
+        worldAnchorManger.saveWorldAnchorsObjectsMapToDisk()
+    }
+    
     @MainActor
     func processWorldAnchorUpdates() async {
         for await worldAnchorUpdate in worldTracking.anchorUpdates {

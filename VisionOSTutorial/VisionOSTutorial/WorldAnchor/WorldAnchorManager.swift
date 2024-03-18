@@ -177,6 +177,8 @@ final class WorldAnchorManager {
         
         objectsBeingAnchored[worldAnchor.id] = object
         do {
+            // add world anchor, and processWorldAnchorUpdate will get called, which will
+            // look at objectsBeingAnchored for that id, and add to rootEntity
             try await worldTracking.addAnchor(worldAnchor)
             print("🍏 worldAnchor added to worldTracking")
         } catch {
