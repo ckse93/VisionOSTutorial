@@ -19,46 +19,60 @@ struct ContentView: View {
     @Environment(\.dismissWindow) var dismissWindow
     
     var body: some View {
-        VStack {
-            Button {
-                self.openWindow(id: WindowDestination.buttonsView)
-            } label: {
-                Text("open Buttons View")
-            }
-            Button {
-                self.openWindow(id: WindowDestination.myModelView1)
-            } label: {
-                Text("open myModelView1")
-            }
-            Button {
-                self.openWindow(id: WindowDestination.myModelView2)
-            } label: {
-                Text("open myModelView2")
-            }
-            
-            Text("Hello, world!")
-
-            Toggle("Show Immersive Space", isOn: $showImmersiveSpace)
-                .toggleStyle(.button)
-                .padding(.top, 50)
-            
-            Button {
-                Task {
-                    await self.openImmersiveSpace(id: WindowDestination.remoteAssetReality)
+        HStack {
+            VStack {
+                Button {
+                    self.openWindow(id: WindowDestination.buttonsView)
+                } label: {
+                    Text("open Buttons View")
                 }
-            } label: {
-                Text("remote asset reality view")
-            }
-            
-            Button {
-                Task {
-                    await self.dismissImmersiveSpace()
+                Button {
+                    self.openWindow(id: WindowDestination.myModelView1)
+                } label: {
+                    Text("open myModelView1")
                 }
-            } label: {
-                Text("Dismiss immersive space")
+                Button {
+                    self.openWindow(id: WindowDestination.myModelView2)
+                } label: {
+                    Text("open myModelView2")
+                }
             }
-            
+            Divider()
+            VStack {
+                Button {
+                    Task {
+                        await self.openImmersiveSpace(id: WindowDestination.worldAnchor, value: AssetName.guitar)
+                    }
+                } label: {
+                    Text("World Anchor View")
+                }
+                
+                Button {
+                    Task {
+                        await self.openImmersiveSpace(id: WindowDestination.localAssetReality, value: AssetName.gramophone)
+                    }
+                } label: {
+                    Text("Local asset reality view")
+                }
+                
+                Button {
+                    Task {
+                        await self.openImmersiveSpace(id: WindowDestination.remoteAssetReality)
+                    }
+                } label: {
+                    Text("remote asset reality view")
+                }
+                
+                Button {
+                    Task {
+                        await self.dismissImmersiveSpace()
+                    }
+                } label: {
+                    Text("Dismiss immersive space")
+                }
+            }
         }
+        
         .padding()
         .onChange(of: showImmersiveSpace) { _, newValue in
             Task {

@@ -9,6 +9,8 @@ import SwiftUI
 
 @main
 struct VisionOSTutorialApp: App {
+    @State private var appState = AppState()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
@@ -24,15 +26,18 @@ struct VisionOSTutorialApp: App {
         WindowGroup(id: WindowDestination.buttonsView) {
             ButtonsView()
         }
-
-        ImmersiveSpace(id: "ImmersiveSpace") {
-            ImmersiveView()
-        }
         
         ImmersiveSpace(id: WindowDestination.localAssetReality,
                        for: AssetName.self) { assetName in
             if let assetName = assetName.wrappedValue {
                 LocalAssetRealityView(assetName: assetName)
+            }
+        }
+        
+        ImmersiveSpace(id: WindowDestination.worldAnchor,
+                       for: AssetName.self) { assetName in
+            if let assetName = assetName.wrappedValue {
+                LocalAssetWorldAnchorView(appState: self.appState, assetName: assetName)
             }
         }
         
@@ -55,5 +60,6 @@ struct WindowDestination {
     static let myModelView3 = "myModelView3"
     static let localAssetReality = "localAssetReality"
     static let remoteAssetReality = "remoteAssetReality"
+    static let worldAnchor = "worldAnchor"
     static let buttonsView = "buttonsView"
 }

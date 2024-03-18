@@ -1,13 +1,14 @@
 //
-//  LocalAssetRealityView.swift
+//  LocalAssetView.swift
 //  VisionOSTutorial
 //
-//  Created by Chan Jung on 12/12/23.
+//  Created by Chan Jung on 3/18/24.
 //
 
+import ARKit
 import SwiftUI
 import RealityKit
-
+@MainActor // cuz PlacementManager.init is @MainActor
 struct LocalAssetRealityView: View {
     let assetName: AssetName
     var body: some View {

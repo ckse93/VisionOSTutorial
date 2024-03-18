@@ -10,7 +10,7 @@
 		144D5D822B291B4B009F2B3A /* gramophone.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 144D5D7F2B291B4A009F2B3A /* gramophone.usdz */; };
 		144D5D832B291B4B009F2B3A /* chair_swan.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 144D5D802B291B4B009F2B3A /* chair_swan.usdz */; };
 		144D5D842B291B4B009F2B3A /* wateringcan.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 144D5D812B291B4B009F2B3A /* wateringcan.usdz */; };
-		144D5D882B291FC1009F2B3A /* LocalAssetRealityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144D5D872B291FC1009F2B3A /* LocalAssetRealityView.swift */; };
+		144D5D882B291FC1009F2B3A /* LocalAssetWorldAnchorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144D5D872B291FC1009F2B3A /* LocalAssetWorldAnchorView.swift */; };
 		14726BC12B23FAEA009084DC /* VisionOSTutorialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14726BC02B23FAEA009084DC /* VisionOSTutorialApp.swift */; };
 		14726BC32B23FAEA009084DC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14726BC22B23FAEA009084DC /* ContentView.swift */; };
 		14726BC52B23FAEA009084DC /* ImmersiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14726BC42B23FAEA009084DC /* ImmersiveView.swift */; };
@@ -20,6 +20,13 @@
 		14726BD82B240773009084DC /* MyModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14726BD72B240773009084DC /* MyModelView.swift */; };
 		AF138D762B9BC029006679B1 /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF138D752B9BC029006679B1 /* ButtonsView.swift */; };
 		AF434AC82B61EC52008B346A /* ModelEntity + Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF434AC72B61EC52008B346A /* ModelEntity + Helper.swift */; };
+		AF5939EC2BA397F100C65632 /* FileManager + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5939EB2BA397F100C65632 /* FileManager + Extensions.swift */; };
+		AF5939EE2BA3A0F200C65632 /* GeometryHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5939ED2BA3A0F200C65632 /* GeometryHelpers.swift */; };
+		AF5939F12BA8AABC00C65632 /* WorldAnchorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5939F02BA8AABC00C65632 /* WorldAnchorManager.swift */; };
+		AF5939F32BA8AAE100C65632 /* PlacementManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5939F22BA8AAE100C65632 /* PlacementManager.swift */; };
+		AF5939F52BA8AB1F00C65632 /* PlaceableAndPlacedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5939F42BA8AB1F00C65632 /* PlaceableAndPlacedObject.swift */; };
+		AF5939F72BA8AB8100C65632 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5939F62BA8AB8100C65632 /* AppState.swift */; };
+		AF5939F92BA8BC3D00C65632 /* LocalAssetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5939F82BA8BC3D00C65632 /* LocalAssetView.swift */; };
 		AF8FB3C62B5F22D200A38DCB /* RemoteAssetRealityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8FB3C52B5F22D200A38DCB /* RemoteAssetRealityView.swift */; };
 /* End PBXBuildFile section */
 
@@ -27,7 +34,7 @@
 		144D5D7F2B291B4A009F2B3A /* gramophone.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = gramophone.usdz; sourceTree = "<group>"; };
 		144D5D802B291B4B009F2B3A /* chair_swan.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = chair_swan.usdz; sourceTree = "<group>"; };
 		144D5D812B291B4B009F2B3A /* wateringcan.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = wateringcan.usdz; sourceTree = "<group>"; };
-		144D5D872B291FC1009F2B3A /* LocalAssetRealityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAssetRealityView.swift; sourceTree = "<group>"; };
+		144D5D872B291FC1009F2B3A /* LocalAssetWorldAnchorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAssetWorldAnchorView.swift; sourceTree = "<group>"; };
 		14726BB92B23FAEA009084DC /* VisionOSTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VisionOSTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14726BBD2B23FAEA009084DC /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
 		14726BC02B23FAEA009084DC /* VisionOSTutorialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionOSTutorialApp.swift; sourceTree = "<group>"; };
@@ -40,6 +47,13 @@
 		14726BD72B240773009084DC /* MyModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyModelView.swift; sourceTree = "<group>"; };
 		AF138D752B9BC029006679B1 /* ButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
 		AF434AC72B61EC52008B346A /* ModelEntity + Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ModelEntity + Helper.swift"; sourceTree = "<group>"; };
+		AF5939EB2BA397F100C65632 /* FileManager + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager + Extensions.swift"; sourceTree = "<group>"; };
+		AF5939ED2BA3A0F200C65632 /* GeometryHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryHelpers.swift; sourceTree = "<group>"; };
+		AF5939F02BA8AABC00C65632 /* WorldAnchorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorldAnchorManager.swift; sourceTree = "<group>"; };
+		AF5939F22BA8AAE100C65632 /* PlacementManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacementManager.swift; sourceTree = "<group>"; };
+		AF5939F42BA8AB1F00C65632 /* PlaceableAndPlacedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceableAndPlacedObject.swift; sourceTree = "<group>"; };
+		AF5939F62BA8AB8100C65632 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		AF5939F82BA8BC3D00C65632 /* LocalAssetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalAssetView.swift; sourceTree = "<group>"; };
 		AF8FB3C52B5F22D200A38DCB /* RemoteAssetRealityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAssetRealityView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,8 +88,9 @@
 		14726BBB2B23FAEA009084DC /* VisionOSTutorial */ = {
 			isa = PBXGroup;
 			children = (
+				AF5939EF2BA8AAA400C65632 /* WorldAnchor */,
+				AF5939EA2BA397E200C65632 /* Helper */,
 				14726BC02B23FAEA009084DC /* VisionOSTutorialApp.swift */,
-				144D5D872B291FC1009F2B3A /* LocalAssetRealityView.swift */,
 				AF8FB3C52B5F22D200A38DCB /* RemoteAssetRealityView.swift */,
 				AF434AC72B61EC52008B346A /* ModelEntity + Helper.swift */,
 				144D5D802B291B4B009F2B3A /* chair_swan.usdz */,
@@ -89,6 +104,8 @@
 				14726BC82B23FAEC009084DC /* Preview Content */,
 				14726BD72B240773009084DC /* MyModelView.swift */,
 				AF138D752B9BC029006679B1 /* ButtonsView.swift */,
+				AF5939F62BA8AB8100C65632 /* AppState.swift */,
+				AF5939F82BA8BC3D00C65632 /* LocalAssetView.swift */,
 			);
 			path = VisionOSTutorial;
 			sourceTree = "<group>";
@@ -107,6 +124,26 @@
 				14726BC92B23FAEC009084DC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		AF5939EA2BA397E200C65632 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				AF5939EB2BA397F100C65632 /* FileManager + Extensions.swift */,
+				AF5939ED2BA3A0F200C65632 /* GeometryHelpers.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		AF5939EF2BA8AAA400C65632 /* WorldAnchor */ = {
+			isa = PBXGroup;
+			children = (
+				144D5D872B291FC1009F2B3A /* LocalAssetWorldAnchorView.swift */,
+				AF5939F02BA8AABC00C65632 /* WorldAnchorManager.swift */,
+				AF5939F22BA8AAE100C65632 /* PlacementManager.swift */,
+				AF5939F42BA8AB1F00C65632 /* PlaceableAndPlacedObject.swift */,
+			);
+			path = WorldAnchor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,11 +223,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF434AC82B61EC52008B346A /* ModelEntity + Helper.swift in Sources */,
+				AF5939F32BA8AAE100C65632 /* PlacementManager.swift in Sources */,
 				14726BC32B23FAEA009084DC /* ContentView.swift in Sources */,
 				14726BC12B23FAEA009084DC /* VisionOSTutorialApp.swift in Sources */,
+				AF5939F52BA8AB1F00C65632 /* PlaceableAndPlacedObject.swift in Sources */,
 				14726BD82B240773009084DC /* MyModelView.swift in Sources */,
-				144D5D882B291FC1009F2B3A /* LocalAssetRealityView.swift in Sources */,
+				AF5939F92BA8BC3D00C65632 /* LocalAssetView.swift in Sources */,
+				144D5D882B291FC1009F2B3A /* LocalAssetWorldAnchorView.swift in Sources */,
+				AF5939EE2BA3A0F200C65632 /* GeometryHelpers.swift in Sources */,
 				AF8FB3C62B5F22D200A38DCB /* RemoteAssetRealityView.swift in Sources */,
+				AF5939F72BA8AB8100C65632 /* AppState.swift in Sources */,
+				AF5939EC2BA397F100C65632 /* FileManager + Extensions.swift in Sources */,
+				AF5939F12BA8AABC00C65632 /* WorldAnchorManager.swift in Sources */,
 				AF138D762B9BC029006679B1 /* ButtonsView.swift in Sources */,
 				14726BC52B23FAEA009084DC /* ImmersiveView.swift in Sources */,
 			);
