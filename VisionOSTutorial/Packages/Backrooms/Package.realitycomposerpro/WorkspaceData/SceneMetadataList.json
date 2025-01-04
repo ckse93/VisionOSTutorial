@@ -1,0 +1,75 @@
+{
+  "6156C4C7-D6FC-49AE-A973-262111B6EE9C" : {
+    "objectMetadataList" : [
+      [
+        "6156C4C7-D6FC-49AE-A973-262111B6EE9C",
+        "Root",
+        "wall",
+        "WallMaterial"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "6156C4C7-D6FC-49AE-A973-262111B6EE9C",
+        "Root",
+        "floor"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "6156C4C7-D6FC-49AE-A973-262111B6EE9C",
+        "Root",
+        "ceiling",
+        "CeilingMaterial"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "6156C4C7-D6FC-49AE-A973-262111B6EE9C",
+        "Root"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "6156C4C7-D6FC-49AE-A973-262111B6EE9C",
+        "Root",
+        "floor",
+        "FloorMaterial"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "6156C4C7-D6FC-49AE-A973-262111B6EE9C",
+        "Root",
+        "_materials",
+        "emmisive"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      }
+    ]
+  },
+  "A28B3506-35E9-4F85-82DF-17C6A16F2F86" : {
+    "objectMetadataList" : [
+      [
+        "A28B3506-35E9-4F85-82DF-17C6A16F2F86",
+        "Root"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      }
+    ]
+  }
+}
