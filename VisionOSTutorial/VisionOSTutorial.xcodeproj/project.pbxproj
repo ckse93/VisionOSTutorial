@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 60;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,9 @@
 		14726BD82B240773009084DC /* MyModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14726BD72B240773009084DC /* MyModelView.swift */; };
 		AF138D762B9BC029006679B1 /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF138D752B9BC029006679B1 /* ButtonsView.swift */; };
 		AF434AC82B61EC52008B346A /* ModelEntity + Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF434AC72B61EC52008B346A /* ModelEntity + Helper.swift */; };
+		AF551B882D2B49CD00719034 /* Backrooms in Frameworks */ = {isa = PBXBuildFile; productRef = AF551B872D2B49CD00719034 /* Backrooms */; };
+		AF551B8A2D2B4A0000719034 /* ImmersiveEnvManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF551B892D2B4A0000719034 /* ImmersiveEnvManager.swift */; };
+		AF551B8C2D2B4B0400719034 /* BackroomsImmersiveSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF551B8B2D2B4B0400719034 /* BackroomsImmersiveSpace.swift */; };
 		AF8FB3C62B5F22D200A38DCB /* RemoteAssetRealityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF8FB3C52B5F22D200A38DCB /* RemoteAssetRealityView.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +43,8 @@
 		14726BD72B240773009084DC /* MyModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyModelView.swift; sourceTree = "<group>"; };
 		AF138D752B9BC029006679B1 /* ButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
 		AF434AC72B61EC52008B346A /* ModelEntity + Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ModelEntity + Helper.swift"; sourceTree = "<group>"; };
+		AF551B892D2B4A0000719034 /* ImmersiveEnvManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmersiveEnvManager.swift; sourceTree = "<group>"; };
+		AF551B8B2D2B4B0400719034 /* BackroomsImmersiveSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackroomsImmersiveSpace.swift; sourceTree = "<group>"; };
 		AF8FB3C52B5F22D200A38DCB /* RemoteAssetRealityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteAssetRealityView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -48,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF551B882D2B49CD00719034 /* Backrooms in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +95,8 @@
 				14726BC82B23FAEC009084DC /* Preview Content */,
 				14726BD72B240773009084DC /* MyModelView.swift */,
 				AF138D752B9BC029006679B1 /* ButtonsView.swift */,
+				AF551B8B2D2B4B0400719034 /* BackroomsImmersiveSpace.swift */,
+				AF551B892D2B4A0000719034 /* ImmersiveEnvManager.swift */,
 			);
 			path = VisionOSTutorial;
 			sourceTree = "<group>";
@@ -126,6 +134,7 @@
 			);
 			name = VisionOSTutorial;
 			packageProductDependencies = (
+				AF551B872D2B49CD00719034 /* Backrooms */,
 			);
 			productName = VisionOSTutorial;
 			productReference = 14726BB92B23FAEA009084DC /* VisionOSTutorial.app */;
@@ -155,6 +164,9 @@
 				Base,
 			);
 			mainGroup = 14726BB02B23FAEA009084DC;
+			packageReferences = (
+				AF551B862D2B49CD00719034 /* XCLocalSwiftPackageReference "Packages/Backrooms" */,
+			);
 			productRefGroup = 14726BBA2B23FAEA009084DC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -185,7 +197,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF551B8C2D2B4B0400719034 /* BackroomsImmersiveSpace.swift in Sources */,
 				AF434AC82B61EC52008B346A /* ModelEntity + Helper.swift in Sources */,
+				AF551B8A2D2B4A0000719034 /* ImmersiveEnvManager.swift in Sources */,
 				14726BC32B23FAEA009084DC /* ContentView.swift in Sources */,
 				14726BC12B23FAEA009084DC /* VisionOSTutorialApp.swift in Sources */,
 				14726BD82B240773009084DC /* MyModelView.swift in Sources */,
@@ -341,7 +355,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
-				XROS_DEPLOYMENT_TARGET = 1.0.1;
+				XROS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
 		};
@@ -368,7 +382,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
-				XROS_DEPLOYMENT_TARGET = 1.0.1;
+				XROS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
@@ -394,6 +408,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		AF551B862D2B49CD00719034 /* XCLocalSwiftPackageReference "Packages/Backrooms" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = Packages/Backrooms;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AF551B872D2B49CD00719034 /* Backrooms */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Backrooms;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 14726BB12B23FAEA009084DC /* Project object */;
 }

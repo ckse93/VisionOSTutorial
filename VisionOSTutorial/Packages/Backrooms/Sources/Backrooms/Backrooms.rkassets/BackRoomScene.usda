@@ -16,15 +16,27 @@ def Xform "Root"
     def "backrooms" (
         active = true
         customData = {
-            float3 rotationEulerHint = (0, 0, -0.78539807)
+            float3 rotationEulerHint = (0, 0, -0.6981317)
         }
         prepend references = @backrooms.usdc@
     )
     {
-        quatf xformOp:orient = (0.92387956, 0, 0, -0.3826834)
+        quatf xformOp:orient = (0.9396926, 0, 0, -0.34202012)
         float3 xformOp:scale = (1, 1, 1)
-        float3 xformOp:translate = (3.238659, -3.089041, 0.2799095)
+        float3 xformOp:translate = (4.008688, 0, 0)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        over "wall"
+        {
+            over "WallMaterial"
+            {
+                over "Image"
+                {
+                    float2 ui:nodegraph:node:pos = (-330.34567, 90.39386)
+                    int ui:nodegraph:node:stackingOrder = 5
+                }
+            }
+        }
     }
 }
 

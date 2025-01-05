@@ -3,18 +3,7 @@
     "objectMetadataList" : [
       [
         "6156C4C7-D6FC-49AE-A973-262111B6EE9C",
-        "Root",
-        "wall",
-        "WallMaterial"
-      ],
-      {
-        "isExpanded" : true,
-        "isLocked" : false
-      },
-      [
-        "6156C4C7-D6FC-49AE-A973-262111B6EE9C",
-        "Root",
-        "floor"
+        "Root"
       ],
       {
         "isExpanded" : true,
@@ -32,7 +21,28 @@
       },
       [
         "6156C4C7-D6FC-49AE-A973-262111B6EE9C",
-        "Root"
+        "Root",
+        "_materials",
+        "emmisive"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "6156C4C7-D6FC-49AE-A973-262111B6EE9C",
+        "Root",
+        "_materials"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "6156C4C7-D6FC-49AE-A973-262111B6EE9C",
+        "Root",
+        "wall",
+        "WallMaterial"
       ],
       {
         "isExpanded" : true,
@@ -51,8 +61,26 @@
       [
         "6156C4C7-D6FC-49AE-A973-262111B6EE9C",
         "Root",
-        "_materials",
-        "emmisive"
+        "floor"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "6156C4C7-D6FC-49AE-A973-262111B6EE9C",
+        "Root",
+        "wall"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "6156C4C7-D6FC-49AE-A973-262111B6EE9C",
+        "Root",
+        "wall",
+        "Cube_118"
       ],
       {
         "isExpanded" : true,
@@ -64,7 +92,37 @@
     "objectMetadataList" : [
       [
         "A28B3506-35E9-4F85-82DF-17C6A16F2F86",
+        "Root",
+        "backrooms",
+        "wall",
+        "WallMaterial"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "A28B3506-35E9-4F85-82DF-17C6A16F2F86",
         "Root"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "A28B3506-35E9-4F85-82DF-17C6A16F2F86",
+        "Root",
+        "backrooms",
+        "wall"
+      ],
+      {
+        "isExpanded" : true,
+        "isLocked" : false
+      },
+      [
+        "A28B3506-35E9-4F85-82DF-17C6A16F2F86",
+        "Root",
+        "backrooms"
       ],
       {
         "isExpanded" : true,
