@@ -19,6 +19,7 @@
 		14726BD62B240749009084DC /* gtr.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 14726BD32B240749009084DC /* gtr.usdz */; };
 		14726BD82B240773009084DC /* MyModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14726BD72B240773009084DC /* MyModelView.swift */; };
 		AF138D762B9BC029006679B1 /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF138D752B9BC029006679B1 /* ButtonsView.swift */; };
+		AF2E71F22D2C76590003F27E /* lightsabersample.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AF2E71F12D2C76590003F27E /* lightsabersample.mp4 */; };
 		AF434AC82B61EC52008B346A /* ModelEntity + Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF434AC72B61EC52008B346A /* ModelEntity + Helper.swift */; };
 		AF551B882D2B49CD00719034 /* Backrooms in Frameworks */ = {isa = PBXBuildFile; productRef = AF551B872D2B49CD00719034 /* Backrooms */; };
 		AF551B8A2D2B4A0000719034 /* ImmersiveEnvManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF551B892D2B4A0000719034 /* ImmersiveEnvManager.swift */; };
@@ -42,6 +43,7 @@
 		14726BD32B240749009084DC /* gtr.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = gtr.usdz; sourceTree = "<group>"; };
 		14726BD72B240773009084DC /* MyModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyModelView.swift; sourceTree = "<group>"; };
 		AF138D752B9BC029006679B1 /* ButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
+		AF2E71F12D2C76590003F27E /* lightsabersample.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = lightsabersample.mp4; sourceTree = "<group>"; };
 		AF434AC72B61EC52008B346A /* ModelEntity + Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ModelEntity + Helper.swift"; sourceTree = "<group>"; };
 		AF551B892D2B4A0000719034 /* ImmersiveEnvManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmersiveEnvManager.swift; sourceTree = "<group>"; };
 		AF551B8B2D2B4B0400719034 /* BackroomsImmersiveSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackroomsImmersiveSpace.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 		14726BBB2B23FAEA009084DC /* VisionOSTutorial */ = {
 			isa = PBXGroup;
 			children = (
+				AF2E71F12D2C76590003F27E /* lightsabersample.mp4 */,
 				14726BC02B23FAEA009084DC /* VisionOSTutorialApp.swift */,
 				144D5D872B291FC1009F2B3A /* LocalAssetRealityView.swift */,
 				AF8FB3C52B5F22D200A38DCB /* RemoteAssetRealityView.swift */,
@@ -187,6 +190,7 @@
 				144D5D842B291B4B009F2B3A /* wateringcan.usdz in Resources */,
 				144D5D832B291B4B009F2B3A /* chair_swan.usdz in Resources */,
 				144D5D822B291B4B009F2B3A /* gramophone.usdz in Resources */,
+				AF2E71F22D2C76590003F27E /* lightsabersample.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

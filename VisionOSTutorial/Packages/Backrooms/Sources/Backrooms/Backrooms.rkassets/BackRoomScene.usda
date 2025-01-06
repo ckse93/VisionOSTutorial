@@ -38,5 +38,39 @@ def Xform "Root"
             }
         }
     }
+
+    def Xform "Video_Dock"
+    {
+        double3 xformOp:translate = (-2.5263566970825195, 1, 0)
+        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+        def Xform "Player"
+        {
+            double3 xformOp:translate = (0, 0.8222135305404663, -4)
+            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
+
+            def RealityKitComponent "CustomDockingRegion" (
+                customData = {
+                    asset previewVideo = @../../../../../../../../Downloads/lightsabersample.mp4@
+                }
+            )
+            {
+                token info:id = "RealityKit.CustomDockingRegion"
+
+                def RealityKitStruct "m_bounds"
+                {
+                    float3 max = (2.22, 0.92499995, 0)
+                    float3 min = (-2.22, -0.92499995, -0)
+                }
+            }
+        }
+
+        def "Ground" (
+            prepend references = @Ground.usda@
+        )
+        {
+            float3 xformOp:translate = (5.136811, -6.2439857, 5.8008695)
+        }
+    }
 }
 
