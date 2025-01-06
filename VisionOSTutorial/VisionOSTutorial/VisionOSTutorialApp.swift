@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct VisionOSTutorialApp: App {
+    @State var immersiveEnvManager = ImmersiveEnvManager()
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(immersiveEnvManager)
         }
         
         WindowGroup(id: WindowDestination.myModelView1) {
@@ -39,6 +41,11 @@ struct VisionOSTutorialApp: App {
         ImmersiveSpace(id: WindowDestination.remoteAssetReality) {
             RemoteAssetRealityView()
         }
+        
+        ImmersiveSpace(id: WindowDestination.backroomsImmersiveSpace) {
+            BackroomsImmersiveSpace()
+                .environment(immersiveEnvManager)
+        }
     }
 }
 
@@ -56,4 +63,5 @@ struct WindowDestination {
     static let localAssetReality = "localAssetReality"
     static let remoteAssetReality = "remoteAssetReality"
     static let buttonsView = "buttonsView"
+    static let backroomsImmersiveSpace = "BackroomsImmersiveSpace"
 }

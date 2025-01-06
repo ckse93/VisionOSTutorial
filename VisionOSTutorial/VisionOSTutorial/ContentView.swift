@@ -11,6 +11,8 @@ struct ContentView: View {
 
     @State private var showImmersiveSpace = false
     @State private var immersiveSpaceIsShown = false
+    
+    @Environment(ImmersiveEnvManager.self) var immersiveEnvManager
 
     @Environment(\.openImmersiveSpace) var openImmersiveSpace
     @Environment(\.dismissImmersiveSpace) var dismissImmersiveSpace
@@ -58,6 +60,14 @@ struct ContentView: View {
                 Text("Dismiss immersive space")
             }
             
+            Button {
+                Task {
+                    await immersiveEnvManager.loadAsset()
+                    await self.openImmersiveSpace(id: WindowDestination.backroomsImmersiveSpace)
+                }
+            } label: {
+                Text("Open Backrooms")
+            }
         }
         .padding()
         .onChange(of: showImmersiveSpace) { _, newValue in
