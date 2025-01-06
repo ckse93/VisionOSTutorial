@@ -20,6 +20,7 @@
 		14726BD82B240773009084DC /* MyModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14726BD72B240773009084DC /* MyModelView.swift */; };
 		AF138D762B9BC029006679B1 /* ButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF138D752B9BC029006679B1 /* ButtonsView.swift */; };
 		AF2E71F22D2C76590003F27E /* lightsabersample.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AF2E71F12D2C76590003F27E /* lightsabersample.mp4 */; };
+		AF2E71F42D2C770D0003F27E /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2E71F32D2C770D0003F27E /* VideoView.swift */; };
 		AF434AC82B61EC52008B346A /* ModelEntity + Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF434AC72B61EC52008B346A /* ModelEntity + Helper.swift */; };
 		AF551B882D2B49CD00719034 /* Backrooms in Frameworks */ = {isa = PBXBuildFile; productRef = AF551B872D2B49CD00719034 /* Backrooms */; };
 		AF551B8A2D2B4A0000719034 /* ImmersiveEnvManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF551B892D2B4A0000719034 /* ImmersiveEnvManager.swift */; };
@@ -44,6 +45,7 @@
 		14726BD72B240773009084DC /* MyModelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyModelView.swift; sourceTree = "<group>"; };
 		AF138D752B9BC029006679B1 /* ButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsView.swift; sourceTree = "<group>"; };
 		AF2E71F12D2C76590003F27E /* lightsabersample.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = lightsabersample.mp4; sourceTree = "<group>"; };
+		AF2E71F32D2C770D0003F27E /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
 		AF434AC72B61EC52008B346A /* ModelEntity + Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ModelEntity + Helper.swift"; sourceTree = "<group>"; };
 		AF551B892D2B4A0000719034 /* ImmersiveEnvManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmersiveEnvManager.swift; sourceTree = "<group>"; };
 		AF551B8B2D2B4B0400719034 /* BackroomsImmersiveSpace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackroomsImmersiveSpace.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				14726BC82B23FAEC009084DC /* Preview Content */,
 				14726BD72B240773009084DC /* MyModelView.swift */,
 				AF138D752B9BC029006679B1 /* ButtonsView.swift */,
+				AF2E71F32D2C770D0003F27E /* VideoView.swift */,
 				AF551B8B2D2B4B0400719034 /* BackroomsImmersiveSpace.swift */,
 				AF551B892D2B4A0000719034 /* ImmersiveEnvManager.swift */,
 			);
@@ -210,6 +213,7 @@
 				144D5D882B291FC1009F2B3A /* LocalAssetRealityView.swift in Sources */,
 				AF8FB3C62B5F22D200A38DCB /* RemoteAssetRealityView.swift in Sources */,
 				AF138D762B9BC029006679B1 /* ButtonsView.swift in Sources */,
+				AF2E71F42D2C770D0003F27E /* VideoView.swift in Sources */,
 				14726BC52B23FAEA009084DC /* ImmersiveView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

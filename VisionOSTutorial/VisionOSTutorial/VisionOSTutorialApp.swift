@@ -7,13 +7,34 @@
 
 import SwiftUI
 
+@MainActor
+@Observable
+class AppManager {
+    var mainViewState: MainView = .home
+}
+
 @main
 struct VisionOSTutorialApp: App {
     @State var immersiveEnvManager = ImmersiveEnvManager()
+    @State var avplayerModel = PlayerModel()
+    @State var appManager = AppManager()
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(immersiveEnvManager)
+            switch appManager.mainViewState {
+            case .home:
+                ContentView()
+                    .environment(immersiveEnvManager)
+                    .environment(avplayerModel)
+                    .environment(appManager)
+            case .video:
+                VideoContentView()
+                    .environment(immersiveEnvManager)
+                    .environment(avplayerModel)
+                    .environment(appManager)
+                    .onAppear {
+                        avplayerModel.player.play()
+                    }
+            }
         }
         
         WindowGroup(id: WindowDestination.myModelView1) {
@@ -64,4 +85,9 @@ struct WindowDestination {
     static let remoteAssetReality = "remoteAssetReality"
     static let buttonsView = "buttonsView"
     static let backroomsImmersiveSpace = "BackroomsImmersiveSpace"
+}
+
+enum MainView {
+    case video
+    case home
 }

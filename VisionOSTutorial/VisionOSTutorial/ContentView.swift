@@ -13,6 +13,7 @@ struct ContentView: View {
     @State private var immersiveSpaceIsShown = false
     
     @Environment(ImmersiveEnvManager.self) var immersiveEnvManager
+    @Environment(AppManager.self) var appManager
 
     @Environment(\.openImmersiveSpace) var openImmersiveSpace
     @Environment(\.dismissImmersiveSpace) var dismissImmersiveSpace
@@ -67,6 +68,12 @@ struct ContentView: View {
                 }
             } label: {
                 Text("Open Backrooms")
+            }
+            
+            Button {
+                appManager.mainViewState = .video
+            } label: {
+                Text("open video")
             }
         }
         .padding()
