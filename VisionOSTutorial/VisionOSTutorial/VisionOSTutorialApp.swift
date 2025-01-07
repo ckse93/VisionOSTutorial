@@ -16,25 +16,14 @@ class AppManager {
 @main
 struct VisionOSTutorialApp: App {
     @State var immersiveEnvManager = ImmersiveEnvManager()
-    @State var avplayerModel = PlayerModel()
+    @State var playerModel = PlayerModel()
     @State var appManager = AppManager()
     var body: some Scene {
         WindowGroup {
-            switch appManager.mainViewState {
-            case .home:
-                ContentView()
-                    .environment(immersiveEnvManager)
-                    .environment(avplayerModel)
-                    .environment(appManager)
-            case .video:
-                VideoContentView()
-                    .environment(immersiveEnvManager)
-                    .environment(avplayerModel)
-                    .environment(appManager)
-                    .onAppear {
-                        avplayerModel.player.play()
-                    }
-            }
+            ContentView()
+                .environment(immersiveEnvManager)
+                .environment(playerModel)
+                .environment(appManager)
         }
         
         WindowGroup(id: WindowDestination.myModelView1) {
@@ -66,7 +55,12 @@ struct VisionOSTutorialApp: App {
         ImmersiveSpace(id: WindowDestination.backroomsImmersiveSpace) {
             BackroomsImmersiveSpace()
                 .environment(immersiveEnvManager)
+                .onDisappear {
+                    appManager.mainViewState = .home
+                    immersiveEnvManager.showImmersiveSpace = false
+                }
         }
+        .immersionStyle(selection: .constant(.full), in: .full) // need this otherwise docking region gets ignored
     }
 }
 
@@ -90,4 +84,35 @@ struct WindowDestination {
 enum MainView {
     case video
     case home
+}
+
+struct ContentView: View {
+    @Environment(PlayerModel.self) private var playerModel
+    @Environment(AppManager.self) private var appManager
+    @Environment(ImmersiveEnvManager.self) var immersiveEnvManager
+    
+    var body: some View {
+        Group {
+            switch appManager.mainViewState {
+            case .home:
+                HomeView()
+                    .environment(immersiveEnvManager)
+                    .environment(playerModel)
+                    .environment(appManager)
+            case .video:
+                VideoContentView()
+                    .immersiveEnvironmentPicker {
+                        ImmersiveEnvironmentPickerView()
+                            .environment(immersiveEnvManager)
+                    }
+                    .environment(immersiveEnvManager)
+                    .environment(playerModel)
+                    .environment(appManager)
+                    .onAppear {
+                        playerModel.player.play()
+                    }
+            }
+        }
+        .immersionManager()
+    }
 }

@@ -5,25 +5,26 @@
     }
     defaultPrim = "Root"
     metersPerUnit = 1
-    upAxis = "Z"
+    upAxis = "Y"
 )
 
 def Xform "Root"
 {
+    reorder nameChildren = ["Video_Dock", "backrooms"]
     float3 xformOp:translate = (2.8190794, 0, 0)
     uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
     def "backrooms" (
         active = true
         customData = {
-            float3 rotationEulerHint = (0, 0, -0.6981317)
+            float3 rotationEulerHint = (-1.5707964, -0.6981318, -3.8904172e-8)
         }
         prepend references = @backrooms.usdc@
     )
     {
-        quatf xformOp:orient = (0.9396926, 0, 0, -0.34202012)
+        quatf xformOp:orient = (0.664463, -0.66446304, -0.24184476, -0.2418448)
         float3 xformOp:scale = (1, 1, 1)
-        float3 xformOp:translate = (4.008688, 0, 0)
+        float3 xformOp:translate = (4.008688, 0, 1)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         over "wall"
@@ -41,26 +42,22 @@ def Xform "Root"
 
     def Xform "Video_Dock"
     {
-        double3 xformOp:translate = (-2.5263566970825195, 1, 0)
+        double3 xformOp:translate = (-2.8841631412506104, 0, -7.573006629943848)
         uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
         def Xform "Player"
         {
-            double3 xformOp:translate = (0, 0.8222135305404663, -4)
+            double3 xformOp:translate = (0, 1.600000023841858, 0)
             uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
 
-            def RealityKitComponent "CustomDockingRegion" (
-                customData = {
-                    asset previewVideo = @../../../../../../../../Downloads/lightsabersample.mp4@
-                }
-            )
+            def RealityKitComponent "CustomDockingRegion"
             {
                 token info:id = "RealityKit.CustomDockingRegion"
 
                 def RealityKitStruct "m_bounds"
                 {
-                    float3 max = (2.22, 0.92499995, 0)
-                    float3 min = (-2.22, -0.92499995, -0)
+                    float3 max = (3.15, 1.3125, 0)
+                    float3 min = (-3.15, -1.3125, -0)
                 }
             }
         }
@@ -69,7 +66,6 @@ def Xform "Root"
             prepend references = @Ground.usda@
         )
         {
-            float3 xformOp:translate = (5.136811, -6.2439857, 5.8008695)
         }
     }
 }

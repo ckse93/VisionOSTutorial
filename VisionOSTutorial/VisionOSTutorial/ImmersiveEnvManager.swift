@@ -14,6 +14,7 @@ import RealityKit
 @Observable
 class ImmersiveEnvManager {
     public private(set) var backrooms: Entity?
+    public var showImmersiveSpace: Bool = false
     
     @MainActor
     public func loadAsset() async {
@@ -24,5 +25,19 @@ class ImmersiveEnvManager {
         } catch {
             print("error loading asset: \(error)")
         }
+    }
+    
+    @MainActor
+    public func presentImmersiveSpace() {
+        if self.backrooms == nil {
+            return
+        } else {
+            self.showImmersiveSpace = true
+        }
+    }
+    
+    @MainActor
+    public func dismissImmersiveSpace() {
+        self.showImmersiveSpace = false
     }
 }

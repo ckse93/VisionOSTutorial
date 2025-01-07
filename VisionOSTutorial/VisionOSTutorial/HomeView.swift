@@ -7,8 +7,7 @@
 
 import SwiftUI
 import RealityKit
-struct ContentView: View {
-
+struct HomeView: View {
     @State private var showImmersiveSpace = false
     @State private var immersiveSpaceIsShown = false
     
@@ -99,5 +98,5 @@ struct ContentView: View {
 }
 
 #Preview(windowStyle: .automatic) {
-    ContentView()
+    HomeView()
 }

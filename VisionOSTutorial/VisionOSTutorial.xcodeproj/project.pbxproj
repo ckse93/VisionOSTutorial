@@ -12,7 +12,7 @@
 		144D5D842B291B4B009F2B3A /* wateringcan.usdz in Resources */ = {isa = PBXBuildFile; fileRef = 144D5D812B291B4B009F2B3A /* wateringcan.usdz */; };
 		144D5D882B291FC1009F2B3A /* LocalAssetRealityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 144D5D872B291FC1009F2B3A /* LocalAssetRealityView.swift */; };
 		14726BC12B23FAEA009084DC /* VisionOSTutorialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14726BC02B23FAEA009084DC /* VisionOSTutorialApp.swift */; };
-		14726BC32B23FAEA009084DC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14726BC22B23FAEA009084DC /* ContentView.swift */; };
+		14726BC32B23FAEA009084DC /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14726BC22B23FAEA009084DC /* HomeView.swift */; };
 		14726BC52B23FAEA009084DC /* ImmersiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14726BC42B23FAEA009084DC /* ImmersiveView.swift */; };
 		14726BC72B23FAEC009084DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14726BC62B23FAEC009084DC /* Assets.xcassets */; };
 		14726BCA2B23FAEC009084DC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14726BC92B23FAEC009084DC /* Preview Assets.xcassets */; };
@@ -36,7 +36,7 @@
 		14726BB92B23FAEA009084DC /* VisionOSTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VisionOSTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		14726BBD2B23FAEA009084DC /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
 		14726BC02B23FAEA009084DC /* VisionOSTutorialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionOSTutorialApp.swift; sourceTree = "<group>"; };
-		14726BC22B23FAEA009084DC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		14726BC22B23FAEA009084DC /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		14726BC42B23FAEA009084DC /* ImmersiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmersiveView.swift; sourceTree = "<group>"; };
 		14726BC62B23FAEC009084DC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		14726BC92B23FAEC009084DC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -93,7 +93,7 @@
 				144D5D7F2B291B4A009F2B3A /* gramophone.usdz */,
 				144D5D812B291B4B009F2B3A /* wateringcan.usdz */,
 				14726BD32B240749009084DC /* gtr.usdz */,
-				14726BC22B23FAEA009084DC /* ContentView.swift */,
+				14726BC22B23FAEA009084DC /* HomeView.swift */,
 				14726BC42B23FAEA009084DC /* ImmersiveView.swift */,
 				14726BC62B23FAEC009084DC /* Assets.xcassets */,
 				14726BCB2B23FAEC009084DC /* Info.plist */,
@@ -207,7 +207,7 @@
 				AF551B8C2D2B4B0400719034 /* BackroomsImmersiveSpace.swift in Sources */,
 				AF434AC82B61EC52008B346A /* ModelEntity + Helper.swift in Sources */,
 				AF551B8A2D2B4A0000719034 /* ImmersiveEnvManager.swift in Sources */,
-				14726BC32B23FAEA009084DC /* ContentView.swift in Sources */,
+				14726BC32B23FAEA009084DC /* HomeView.swift in Sources */,
 				14726BC12B23FAEA009084DC /* VisionOSTutorialApp.swift in Sources */,
 				14726BD82B240773009084DC /* MyModelView.swift in Sources */,
 				144D5D882B291FC1009F2B3A /* LocalAssetRealityView.swift in Sources */,
