@@ -16,57 +16,11 @@ def Xform "Root"
 
     def "backrooms" (
         active = true
-        customData = {
-            float3 rotationEulerHint = (-1.5707964, -0.6981318, -3.8904172e-8)
-        }
         prepend references = @backrooms.usdc@
     )
     {
-        quatf xformOp:orient = (0.664463, -0.66446304, -0.24184476, -0.2418448)
         float3 xformOp:scale = (1, 1, 1)
-        float3 xformOp:translate = (4.008688, 0, 1)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        over "wall"
-        {
-            over "WallMaterial"
-            {
-                over "Image"
-                {
-                    float2 ui:nodegraph:node:pos = (-330.34567, 90.39386)
-                    int ui:nodegraph:node:stackingOrder = 5
-                }
-            }
-        }
-    }
-
-    def Xform "Video_Dock"
-    {
-        double3 xformOp:translate = (-2.8841631412506104, 0, -7.573006629943848)
-        uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-        def Xform "Player"
-        {
-            double3 xformOp:translate = (0, 1.600000023841858, 0)
-            uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:orient", "xformOp:scale"]
-
-            def RealityKitComponent "CustomDockingRegion"
-            {
-                token info:id = "RealityKit.CustomDockingRegion"
-
-                def RealityKitStruct "m_bounds"
-                {
-                    float3 max = (3.15, 1.3125, 0)
-                    float3 min = (-3.15, -1.3125, -0)
-                }
-            }
-        }
-
-        def "Ground" (
-            prepend references = @Ground.usda@
-        )
-        {
-        }
+        float3 xformOp:translate = (5.6, 0, 0.000002503395)
     }
 }
 

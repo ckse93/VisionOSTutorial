@@ -20,10 +20,11 @@ class ImmersiveEnvManager {
     public func loadAsset() async {
         do {
             if self.backrooms == nil {
-                self.backrooms = try await Entity(named: "BackRoomScene", in: backroomsBundle)
+                self.backrooms = try await Entity(named: "backrooms3Video", in: backroomsBundle)
             }
         } catch {
-            print("error loading asset: \(error)")
+            // make sure to give it the right asset name!
+            fatalError("error loading asset: \(error)")
         }
     }
     
